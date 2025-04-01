@@ -12,6 +12,7 @@ async function run() {
     const themes = await loader.load('/tokens');
     const globalTheme = themes.getThemeByName('global');
     const lightTheme = themes.getThemeByName('light');
+    const darkTheme = themes.getThemeByName('dark');
 
     const globalConfig = {
         expand:{
@@ -55,9 +56,30 @@ async function run() {
             }
         }
     };
+
+    const darkConfig= {
+        expand:{
+            typesMap: true,
+        },
+        platforms: {
+            web: {
+                files: [
+                    {
+                    destination: 'app/build/dark/variables.css',
+                    format: 'css/variables',
+                    }
+                ],
+                transforms: [
+                    'name/kebab',
+                    'color/rgb',
+                ]
+            }
+        }
+    };
     
     globalTheme.addConfig(globalConfig).build();
     lightTheme.addConfig(lightConfig).build();
+    darkTheme.addConfig(darkConfig).build();
 }
 
 run();
