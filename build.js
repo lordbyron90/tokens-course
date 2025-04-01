@@ -1,7 +1,6 @@
 import StyleDictionary from 'style-dictionary';
 import { register } from '@tokens-studio/sd-transforms';
 import ThemesLoader from 'sd-themes-loader';
-import { platform } from 'os';
 
 register(StyleDictionary, {
     withSDBuiltins: false,
@@ -12,26 +11,53 @@ const loader = ThemesLoader(StyleDictionary);
 async function run() {
     const themes = await loader.load('/tokens');
     const globalTheme = themes.getThemeByName('global');
+    const lightTheme = themes.getThemeByName('light');
 
-    const config = {
+    const globalConfig = {
+        expand:{
+            typesMap: true,
+        },
         platforms: {
             web: {
                 files: [
                     {
-                        destination: 'app/build/global/variables.css',
-                        format: 'css/variables',
+                    destination: 'app/build/global/variables.css',
+                    format: 'css/variables',
                     }
                 ],
                 transforms: [
                     'name/camel',
                     'ts/resolveMath',
+                    'ts/typography/fontWeight',
+                    'ts/size/lineheight',
                     'size/pxToRem'
                 ]
             }
         }
-    }
+    };
 
-    globalTheme.addConfig(config).build();
+    const lightConfig= {
+        expand:{
+            typesMap: true,
+        },
+        platforms: {
+            web: {
+                files: [
+                    {
+                    destination: 'app/build/light/variables.css',
+                    format: 'css/variables',
+                    }
+                ],
+                transforms: [
+                    'name/kebab',
+                    'color/rgb',
+                ]
+            }
+        }
+    };
+    
+    globalTheme.addConfig(globalConfig).build();
+    lightTheme.addConfig(lightConfig).build();
 }
 
 run();
