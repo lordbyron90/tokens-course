@@ -2,7 +2,7 @@
  * Do not edit directly, this file was auto-generated.
  */
 
-:root {
+.dark {
   --color-palette-black: rgb(34, 34, 34);
   --color-palette-white: rgb(251, 251, 251);
   --color-palette-mono-50: rgb(246, 246, 247);
@@ -92,34 +92,34 @@
   --color-button-border-secondary-default: rgb(102, 76, 255);
   --color-button-border-secondary-hover: rgb(102, 76, 255);
   --color-button-border-secondary-active: rgb(102, 76, 255);
-  --assets-hero-bg: layout-bg-dark.svg;
-  --assets-intro-right: galaxy-dark.svg;
-  --assets-header-logo: logo-designtokens-es-dark.svg;
-  --assets-button-link: arrow-link-dark.svg;
-  --assets-footer-logo: logo-designtokens-es-black.svg;
-  --assets-logos-1: Atlassian-logo-dark.svg;
-  --assets-logos-2: google-logo-dark.svg;
-  --assets-logos-3: zendesk-logo-dark.svg;
-  --assets-logos-4: adobe-logo-dark.svg;
-  --assets-logos-5: salesforce-logo-dark.svg;
-  --assets-logos-6: uber-logo-dark.svg;
-  --assets-logos-placeholder-1: Atlassian-logo-placeholder-dark.svg;
-  --assets-logos-placeholder-2: google-logo-placeholder-dark.svg;
-  --assets-logos-placeholder-3: zendesk-logo-placeholder-dark.svg;
-  --assets-logos-placeholder-4: adobe-logo-placeholder-dark.svg;
-  --assets-logos-placeholder-5: salesforce-logo-placeholder-dark.svg;
-  --assets-logos-placeholder-6: uber-logo-placeholder-dark.svg;
-  --assets-avatar-1: pablo-fernandez.png;
-  --assets-avatar-2: pablo-peribanez.png;
-  --assets-avatar-3: pablo-garcia.png;
-  --assets-avatar-4: marta-landin.png;
-  --assets-avatar-5: guillermo-adan.png;
-  --assets-avatar-6: rut-galvin.png;
-  --assets-avatar-7: natalia-soria.png;
-  --assets-avatar-8: veronica-aguilar.png;
-  --assets-avatar-9: mar-perez.png;
-  --assets-avatar-10: angela-velasco.png;
-  --assets-avatar-11: sofia-ortiz.png;
-  --assets-language-es: spanish.svg;
-  --assets-language-en: english.svg;
+  --assets-hero-bg: url('/app/assets/layout-bg-dark.svg');
+  --assets-intro-right: url('/app/assets/galaxy-dark.svg');
+  --assets-header-logo: url('/app/assets/logo-designtokens-es-dark.svg');
+  --assets-button-link: url('/app/assets/arrow-link-dark.svg');
+  --assets-footer-logo: url('/app/assets/logo-designtokens-es-black.svg');
+  --assets-logos-1: url('/app/assets/Atlassian-logo-dark.svg');
+  --assets-logos-2: url('/app/assets/google-logo-dark.svg');
+  --assets-logos-3: url('/app/assets/zendesk-logo-dark.svg');
+  --assets-logos-4: url('/app/assets/adobe-logo-dark.svg');
+  --assets-logos-5: url('/app/assets/salesforce-logo-dark.svg');
+  --assets-logos-6: url('/app/assets/uber-logo-dark.svg');
+  --assets-logos-placeholder-1: url('/app/assets/Atlassian-logo-placeholder-dark.svg');
+  --assets-logos-placeholder-2: url('/app/assets/google-logo-placeholder-dark.svg');
+  --assets-logos-placeholder-3: url('/app/assets/zendesk-logo-placeholder-dark.svg');
+  --assets-logos-placeholder-4: url('/app/assets/adobe-logo-placeholder-dark.svg');
+  --assets-logos-placeholder-5: url('/app/assets/salesforce-logo-placeholder-dark.svg');
+  --assets-logos-placeholder-6: url('/app/assets/uber-logo-placeholder-dark.svg');
+  --assets-avatar-1: url('/app/assets/pablo-fernandez.png');
+  --assets-avatar-2: url('/app/assets/pablo-peribanez.png');
+  --assets-avatar-3: url('/app/assets/pablo-garcia.png');
+  --assets-avatar-4: url('/app/assets/marta-landin.png');
+  --assets-avatar-5: url('/app/assets/guillermo-adan.png');
+  --assets-avatar-6: url('/app/assets/rut-galvin.png');
+  --assets-avatar-7: url('/app/assets/natalia-soria.png');
+  --assets-avatar-8: url('/app/assets/veronica-aguilar.png');
+  --assets-avatar-9: url('/app/assets/mar-perez.png');
+  --assets-avatar-10: url('/app/assets/angela-velasco.png');
+  --assets-avatar-11: url('/app/assets/sofia-ortiz.png');
+  --assets-language-es: url('/app/assets/spanish.svg');
+  --assets-language-en: url('/app/assets/english.svg');
 }

@@ -6,6 +6,13 @@ register(StyleDictionary, {
     withSDBuiltins: false,
 });
 
+StyleDictionary.registerTransform({
+    name: 'assets/background',
+    type: 'value',
+    filter: (token) => token.$type === 'asset',
+    transform: (token) => `url('/app/assets/${token.$value}')`
+});
+
 const loader = ThemesLoader(StyleDictionary);
 
 async function run() {
@@ -13,6 +20,8 @@ async function run() {
     const globalTheme = themes.getThemeByName('global');
     const lightTheme = themes.getThemeByName('light');
     const darkTheme = themes.getThemeByName('dark');
+    const desktopTheme = themes.getThemeByName('desktop');
+    const mobileTheme = themes.getThemeByName('mobile');
 
     const globalConfig = {
         expand:{
@@ -47,11 +56,15 @@ async function run() {
                     {
                     destination: 'app/build/light/variables.css',
                     format: 'css/variables',
+                    options: {
+                        selector: '.light'
+                    }
                     }
                 ],
                 transforms: [
                     'name/kebab',
                     'color/rgb',
+                    'assets/background'
                 ]
             }
         }
@@ -67,11 +80,61 @@ async function run() {
                     {
                     destination: 'app/build/dark/variables.css',
                     format: 'css/variables',
+                    options: {
+                        selector: '.dark'
+                    }
                     }
                 ],
                 transforms: [
                     'name/kebab',
                     'color/rgb',
+                    'assets/background'
+                ]
+            }
+        }
+    };
+
+    const desktopConfig={
+        expand:{
+            typesMap: true,
+        },
+        platforms: {
+            web: {
+                files: [
+                    {
+                    destination: 'app/build/desktop/variables.css',
+                    format: 'css/variables',
+                    }
+                ],
+                transforms: [
+                    'name/kebab',
+                    'ts/resolveMath',
+                    'ts/typography/fontWeight',
+                    'ts/size/lineheight',
+                    'size/pxToRem'
+                ]
+            }
+        }
+    };
+
+    const mobileConfig={
+        expand:{
+            typesMap: true,
+        },
+        platforms: {
+            web: {
+                files: [
+                    {
+                    destination: 'app/build/mobile/variables.css',
+                    format: 'css/variables',
+                    }
+                ],
+                transforms: [
+                    'name/kebab',
+                    'ts/resolveMath',
+                    'ts/typography/fontWeight',
+                    'ts/size/lineheight',
+                    'size/pxToRem'
                 ]
             }
         }
@@ -80,6 +143,8 @@ async function run() {
     globalTheme.addConfig(globalConfig).build();
     lightTheme.addConfig(lightConfig).build();
     darkTheme.addConfig(darkConfig).build();
+    desktopTheme.addConfig(desktopConfig).build();
+    mobileTheme.addConfig(mobileConfig).build();
 }
 
 run();
