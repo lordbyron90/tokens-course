@@ -146,11 +146,11 @@
   "fontFamily": {
     "primary": {
       "$type": "fontFamilies",
-      "$value": "Space Grotesk"
+      "$value": "Manrope"
     },
     "secondary": {
       "$type": "fontFamilies",
-      "$value": "Outfit"
+      "$value": "Inter"
     }
   },
   "lineHeight": {
@@ -232,7 +232,7 @@
     },
     "base": {
       "$type": "fontSizes",
-      "$value": "16"
+      "$value": "18"
     }
   },
   "borderWidth": {
