@@ -27,7 +27,7 @@ async function run() {
                     }
                 ],
                 transforms: [
-                    'name/camel',
+                    'name/kebab',
                     'ts/resolveMath',
                     'ts/typography/fontWeight',
                     'ts/size/lineheight',
