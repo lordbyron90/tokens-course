@@ -140,7 +140,7 @@
     },
     "large": {
       "$type": "borderRadius",
-      "$value": "{dimension.x400}"
+      "$value": "{dimension.x500}"
     }
   },
   "fontFamily": {
