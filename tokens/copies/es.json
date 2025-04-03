@@ -2,11 +2,11 @@
   "hero": {
     "title": {
       "$type": "text",
-      "$value": "Aprende a diseñar e implementar Design Tokens"
+      "$value": "¿Design Tokens? Sí, Design Tokens"
     },
     "subtitle": {
       "$type": "text",
-      "$value": "La mejor formación en español para que domines el diseño, distribución y aplicación de la metodología de Design Tokens. Iniciamos la 2ª edición el 10 de Marzo ¡No te quedes sin plaza!"
+      "$value": "La mejor formación en español para que domines el diseño, distribución y aplicación de la metodología de Design Tokens."
     },
     "button": {
       "$type": "text",

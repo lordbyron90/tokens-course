@@ -2,7 +2,7 @@
   "hero": {
     "title": {
       "$type": "text",
-      "$value": "Learn how to design and implement Design Tokens"
+      "$value": "¿Design Tokens? Yes, Design Tokens"
     },
     "subtitle": {
       "$type": "text",
